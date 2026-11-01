@@ -237,7 +237,7 @@ export function CenterColumn() {
               const cardContent = (
                 <>
                   {/* Visual Column */}
-                  <div className="relative h-60 overflow-hidden bg-[var(--muted)] sm:h-auto sm:min-h-[285px]">
+                  <div className="relative h-60 overflow-hidden bg-[var(--muted)] sm:h-full">
                     {renderSlideVisual(currentSlide)}
                     <span className="absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 rounded-full border bg-[var(--background)] px-2.5 py-1 text-[11px] font-semibold text-[var(--foreground)] shadow-sm">
                       {renderBadgeIcon(currentSlide.badgeIcon, "h-3.5 w-3.5")}
@@ -246,7 +246,7 @@ export function CenterColumn() {
                   </div>
 
                   {/* Info Column */}
-                  <div className="flex flex-col p-5">
+                  <div className="flex h-full flex-col p-5">
                     <div className="flex items-center gap-3">
                       {currentSlide.iconUrl ? (
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-[22%] border bg-white p-1 shadow-sm">
@@ -271,7 +271,7 @@ export function CenterColumn() {
                       </div>
                     </div>
 
-                    <p className="mt-3 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                    <p className="mt-3 line-clamp-3 min-h-[60px] text-sm leading-relaxed text-[var(--muted-foreground)]">
                       {currentSlide.description}
                     </p>
 
@@ -282,7 +282,7 @@ export function CenterColumn() {
                           <dd className="text-lg font-bold tracking-tight text-[var(--foreground)] sm:text-xl">
                             {st.value}
                           </dd>
-                          <dd className="line-clamp-2 text-[11px] leading-tight text-[var(--muted-foreground)]">
+                          <dd className="line-clamp-2 min-h-[28px] text-[11px] leading-tight text-[var(--muted-foreground)]">
                             {st.label}
                           </dd>
                         </div>
@@ -308,7 +308,7 @@ export function CenterColumn() {
                   target="_blank"
                   rel="noreferrer"
                   data-say={currentSlide.say}
-                  className="group grid h-full overflow-hidden rounded-2xl border transition-colors hover:bg-[var(--accent)] sm:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
+                  className="group grid overflow-hidden rounded-2xl border transition-colors hover:bg-[var(--accent)] sm:h-[304px] sm:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
                 >
                   {cardContent}
                 </a>
@@ -317,7 +317,7 @@ export function CenterColumn() {
                   key={currentSlide.id}
                   href={currentSlide.href}
                   data-say={currentSlide.say}
-                  className="group grid h-full overflow-hidden rounded-2xl border transition-colors hover:bg-[var(--accent)] sm:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
+                  className="group grid overflow-hidden rounded-2xl border transition-colors hover:bg-[var(--accent)] sm:h-[304px] sm:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
                 >
                   {cardContent}
                 </Link>
