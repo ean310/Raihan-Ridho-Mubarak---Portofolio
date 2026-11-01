@@ -79,7 +79,7 @@ export function CenterColumn() {
         { o: 1, a: 1, z: 9 },
       ];
       return (
-        <div className="absolute inset-0 flex items-end justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           {offsets.map((cfg, idx) => {
             const scr = screens[idx] || screens[0];
             return (
@@ -92,7 +92,7 @@ export function CenterColumn() {
                     zIndex: cfg.z,
                   } as React.CSSProperties
                 }
-                className="absolute bottom-1.5 aspect-[9/20] w-[30%] max-w-[126px] overflow-hidden rounded-2xl border bg-[var(--background)] shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] [transform:translateX(calc(var(--o)*72%))_rotate(calc(var(--o)*8deg))] group-hover:[transform:translateX(calc(var(--o)*88%))_translateY(calc(-6px_+_var(--a)*3px))_rotate(calc(var(--o)*10deg))]"
+                className="absolute top-1/2 aspect-[9/20] w-[28%] max-w-[112px] overflow-hidden rounded-2xl border bg-[var(--background)] shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] [transform:translateX(calc(var(--o)*74%))_translateY(calc(-45%_+_var(--a)*4px))_rotate(calc(var(--o)*8deg))] group-hover:[transform:translateX(calc(var(--o)*88%))_translateY(calc(-49%_+_var(--a)*4px))_rotate(calc(var(--o)*10deg))]"
               >
                 {scr?.imageUrl ? (
                   <img
