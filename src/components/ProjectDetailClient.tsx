@@ -392,14 +392,14 @@ export function ProjectDetailClient({ project }: { project: ProjectItem }) {
                       type="button"
                       onClick={() => setActiveScreenIdx(idx)}
                       aria-label={`Open ${project.name} screenshot ${idx + 1}: ${scr.title}`}
-                      className="group relative aspect-[500/1050] h-[440px] shrink-0 snap-start overflow-hidden rounded-[22px] border bg-[var(--muted)] lg:h-[520px]"
+                      className="group relative h-[460px] shrink-0 snap-start overflow-hidden rounded-[22px] border bg-[var(--muted)] lg:h-[540px]"
                     >
                       {scr.imageUrl && (
                         <img
                           src={scr.imageUrl}
                           alt={`${project.name} — ${scr.title}`}
                           loading="lazy"
-                          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                          className="h-full w-auto object-contain transition duration-500 group-hover:scale-[1.02]"
                         />
                       )}
                     </button>

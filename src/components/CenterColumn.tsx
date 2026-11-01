@@ -92,13 +92,13 @@ export function CenterColumn() {
                     zIndex: cfg.z,
                   } as React.CSSProperties
                 }
-                className="absolute bottom-[-8%] aspect-[500/1050] w-[31%] max-w-[132px] overflow-hidden rounded-2xl border bg-[var(--background)] shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] [transform:translateX(calc(var(--o)*72%))_rotate(calc(var(--o)*8deg))] group-hover:[transform:translateX(calc(var(--o)*88%))_translateY(calc(-8px_+_var(--a)*3px))_rotate(calc(var(--o)*10deg))]"
+                className="absolute bottom-1.5 aspect-[9/20] w-[30%] max-w-[126px] overflow-hidden rounded-2xl border bg-[var(--background)] shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] [transform:translateX(calc(var(--o)*72%))_rotate(calc(var(--o)*8deg))] group-hover:[transform:translateX(calc(var(--o)*88%))_translateY(calc(-6px_+_var(--a)*3px))_rotate(calc(var(--o)*10deg))]"
               >
                 {scr?.imageUrl ? (
                   <img
                     src={scr.imageUrl}
                     alt={scr.title}
-                    className="h-full w-full object-cover object-top"
+                    className="h-full w-full object-contain"
                   />
                 ) : (
                   <div
